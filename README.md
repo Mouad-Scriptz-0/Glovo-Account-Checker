@@ -6,6 +6,7 @@
 Account checker for the food delivery app [glovo](https://glovoapp.com/).
 
 # Preview
+![image](https://github.com/user-attachments/assets/3b7bbf22-b12a-46ac-ab2c-d32bb5fbd78a)
 
 
 # Installation
