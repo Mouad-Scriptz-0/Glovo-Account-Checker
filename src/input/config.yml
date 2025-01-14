@@ -1,0 +1,3 @@
+console:
+  debug: false
+  show time: false
