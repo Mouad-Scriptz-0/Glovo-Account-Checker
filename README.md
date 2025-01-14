@@ -18,12 +18,14 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
+
 ### Features
 - [x] Concurrent account checking
 - [x] Proxy support
 - [x] Slick UI
 - [x] Decent error handling
 - [x] ...
+
 
 ### Support / Suggestions
 - My discord: **mouad.0**
