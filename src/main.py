@@ -13,7 +13,7 @@ good_lock = threading.Lock()
 def handle_failure(function_name: str, name: str, password: str, response, custom_reason: str = None, save: bool = True):
     if save:
         with failed_lock:
-            with open('output/failed.txt', 'a') as f:
+            with open('src/output/failed.txt', 'a') as f:
                 f.write(f'{name}:{password}\n')
     if custom_reason is None:
         if type(response) == str:
@@ -90,7 +90,7 @@ def check_account(name: str, password: str, proxy: str = None):
             except:
                 print(payment_methods)
     with good_lock:
-        with open('output/good.txt', 'a') as f:
+        with open('src/output/good.txt', 'a') as f:
             f.write(f'{name}:{password}:{json_to_string(essential_info)}\n')
     Console.checker(
         'Logged in!',
@@ -103,11 +103,11 @@ def check_account(name: str, password: str, proxy: str = None):
 
 threads = int(Console.input('Threads'))
 
-proxies = get_lines('input/proxies.txt')
+proxies = get_lines('src/input/proxies.txt')
 random.shuffle(proxies)
 proxies = itertools.cycle(proxies)
 
-combos = get_lines('input/combos.txt')
+combos = get_lines('src/input/combos.txt')
 random.shuffle(combos)
 
 with ThreadPoolExecutor(max_workers=threads) as executor:

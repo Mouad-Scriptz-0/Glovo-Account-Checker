@@ -1,7 +1,7 @@
 import json, base64, yaml
 
 
-config = yaml.safe_load(open('input/config.yml'))
+config = yaml.safe_load(open('src/input/config.yml'))
 
 def json_to_string(data: dict) : return json.dumps(data, separators=(",",":"))
 

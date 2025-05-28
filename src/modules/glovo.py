@@ -177,6 +177,7 @@ class Glovo:
             'username': name,
             'password': password
         }
+        print(payload)
         try:
             response = self.request('POST', 'https://api.glovoapp.com/oauth/token', headers=headers, json=payload)
         except Exception as e:
